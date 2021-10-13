@@ -1,7 +1,7 @@
 {
   "name": "base2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Crea un módulo con tres funciones asíncronas:",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,13 @@
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.13.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodicafazakas/exercise-asynchronicity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rodicafazakas/exercise-asynchronicity/issues"
+  },
+  "homepage": "https://github.com/rodicafazakas/exercise-asynchronicity#readme"
 }
