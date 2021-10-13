@@ -4,15 +4,17 @@
   "description": "Crea un módulo con tres funciones asíncronas:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^27.2.5"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.13.4"
@@ -24,5 +26,14 @@
   "bugs": {
     "url": "https://github.com/rodicafazakas/exercise-asynchronicity/issues"
   },
-  "homepage": "https://github.com/rodicafazakas/exercise-asynchronicity#readme"
+  "homepage": "https://github.com/rodicafazakas/exercise-asynchronicity#readme",
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  }
 }

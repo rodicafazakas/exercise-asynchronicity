@@ -19,34 +19,25 @@ const gettingUserId = getUserId("Victor", (generateUserId) => {
 });*/
 
 
-
-//using promises
-
-const getUserId = (name) => {
-	const promise = new Promise((resolve, reject) => {
-		setTimeout( () => {
-			const generateUserId = createId(name);
-			resolve(generateUserId);
-		}, 2000)
-	})
-
-	return promise;
-};
-
-getUserId("Victor").then( (generateUserId) => {
-	console.log(generateUserId);
-})
-console.log("HA-HA-HA-HA");
-
-
-
-const getUserDataById = (userId) => {
-
-};
-
-console.log*("HA-HA-HA-HA");
-*/
 // Implementation con promises
+const getUserId = (username) => {
+  return new Promise ( (resolve, reject) => {
+  setTimeout( () => {
+    const id = 13;
+    if (username === "Luis") {
+      reject("I'm sick with you");
+    }
+    resolve(id);
+  }, 2000)
+  });
+};
+
+
+getUserId("Victor").then( (id) => {
+	document.querySelector(".id").querySelector(".data").innerHTML = id;
+})
+
+/*
 const getUserId = (name) => {
 	const promise = new Promise((resolve, reject) => {
 		setTimeout( () => {
@@ -61,6 +52,9 @@ getUserId("Victor").then( (generateUserId) => {
 	console.log(generateUserId);
 })
 console.log("HA-HA-HA-HA");
+*/
+
+
 
 
 
@@ -89,11 +83,18 @@ const getUserDataById = (userId) => {
 };
 
 getUserDataById(200).then( (generateUserDataId) => {
+  document.querySelector(".dni").querySelector(".data").innerHTML = generateUserDataId.dni;
 	console.log(generateUserDataId);
 })
 console.log("GLU-GLU-GLU");
 
+
+
 const getFinesByDNI = () => {};
 
 
-
+export default {
+	getUserId,
+	getUserDataById,
+  getFinesByDNI,
+}
